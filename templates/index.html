@@ -1,0 +1,81 @@
+<!-- HTML & CSS Snippet from the following sites: -->
+<!-- https://getbootstrap.com/docs/4.5/ -->
+<!-- https://startbootstrap.com/snippets/sign-in-split/ -->
+
+<!-- Using layout from: https://startbootstrap.com/snippets/sign-in-split/ -->
+<!-- Note: I copied the HTML structure for the base of my web, but extended it to match my usage -->
+<!-- Did not use the css file provided, but some parts of it is copied into the style attribute -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Simpe Sundanese Translator App</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-md-8 col-lg-6">
+                <div class="d-flex align-items-center py-5", style="min-height: 100vh;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <form>
+                                    <h3 class="mb-4", style="font-weight: 300;">Simple Sundanese Translator App</h3>
+                                    <div class="form-group">
+                                        <label for="inputString">Kalimat untuk diterjemahkan</label>
+                                        <input type="text" class="form-control" name="text" id="inputString" placeholder="Masukkan kalimat yang ingin Anda terjemahkan disini..." value="{{ text }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Bahasa terjemahan</label>
+                                        <div class="btn-group btn-group-toggle mx-auto btn-block" data-toggle="buttons" role="group">
+                                            <label class="btn btn-info">
+                                                <input type="radio" name="target" id="option1" autocomplete="off" value="indonesia" required {% if target == "indonesia" %} checked {% endif %}> Indonesia
+                                            </label>
+                                              <label class="btn btn-info">
+                                                <input type="radio" name="target" id="option2" autocomplete="off" value="sunda" required {% if target == "sunda" %} checked {% endif %}> Sunda
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Algoritma pencocokan kata</label>
+                                        <div class="btn-group btn-group-toggle mx-auto btn-block" data-toggle="buttons" role="group">
+                                            <label class="btn btn-info">
+                                                <input type="radio" name="algo" id="option1" autocomplete="off" value="bm" required {% if algo == "bm" %} checked {% endif %}> Boyer-Moore
+                                              </label>
+                                              <label class="btn btn-info">
+                                                <input type="radio" name="algo" id="option2" autocomplete="off" value="kmp" required {% if algo == "kmp" %} checked {% endif %}> Knuth-Morris-Pratt
+                                              </label>
+                                              <label class="btn btn-info">
+                                                <input type="radio" name="algo" id="option3" autocomplete="off" value="re" required {% if algo == "re" %} checked {% endif %}> <i>Regular Expression</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Terjemahkan</button>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Hasil terjemahan akan muncul disini..." value="{{ result }}" readonly>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-md-flex col-md-4 col-lg-6" style="background-image: url('https://source.unsplash.com/PvBECXDZw84/1600x900s');background-size: cover; background-position: center;"></div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

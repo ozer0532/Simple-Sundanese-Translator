@@ -1,62 +1,29 @@
-# Simple Sundanese Translator
+# 13518107 - Simple Sundanese Translator
 Simple Sundanese to Bahasa Indonesia translator using Pattern Matching
+Penerjemah Sederhana dari Bahasa Sunda ke Bahasa Indonesia dengan Pencocokan Pola
 
-## Latar Belakang
-Pada suatu hari, ada mahasiswa bernama Riyugan yang baru pindah ke Bandung. Pada awalnya dia mengalami kesulitan untuk bersosialisai dengan lingkungan sekitar karena orang-orang di lingkungannya yang baru hanya berbicara dalam bahasa Sunda. Beruntungnya Riyugan punya teman dari kampung halamannya, yaitu Anda, untuk diminta membuat penerjemah sederhana dari Bahasa Sunda ke Bahasa Indonesia begitu pula sebaliknya untuk memudahkan dirinya bersosialisasi dengan lingkungan barunya di Bandung.
+## Pembuat
+Chokyi Ozer - 13518107
 
-## Spesifikasi
-Buatlah dalam bahasa pemrograman Python, program penerjemah sederhana yang memanfaatkan algoritma String Matching (Knuth-Morris-Pratt(KMP), Boyer-Moore(BM), dan Regex), dengan spesifikasi sebagai berikut.
-1. Program mampu membaca kata atau kalimat yang akan diterjemahkan.
-2. Program akan membaca file eksternal yang berisi vocabulary Bahasa Sunda - Bahasa Indonesia (file sudah disiapkan dalam repository).
-3. Program akan melakukan penerjemahan secara perkata (untuk contoh akan ditampilkan di bawah).
-4. Program dapat memilih mau "Bahasa Sunda ke Bahasa Indonesia" atau "Bahasa Indonesia ke Bahasa Sunda".
-5. Pada saat penerjemahan "Bahasa Sunda ke Bahasa Indonesia", program mampu mengenali kata yang tidak memiliki arti (stopwords), seperti "teh" sehingga dapat diabaikan saat penerjemahan.
-6. Pada saat penerjemahan "Bahasa Indonesia ke Bahasa Sunda", program mampu menambahkan kata untuk penekanan kalimat, seperti "teh".
-7. Program dapat menampilkan hasil terjemahan.
-8. Program dibuat secara individu.
-9. Peserta akan mendapatkan nilai bonus jika mengimplementasikan dalam web (untuk bahasanya dibebaskan).
-10. Dilarang meng-copy source code program yang sudah jadi, untuk source code algoritma string matching dipersilahkan menggunakan source code dari tugas yang sudah pernah dibuat (Tugas Kecil 4).
-11. Batas pengerjaannya adalah 6 Juni 2020.
+## Ikhtisar
+*Repository* ini berisi program untuk menjalankan aplikasi *web* penerjemah Bahasa Indonesia dan Sunda. Program ini merupakan pengumpulan tugas seleksi asisten lab IRK yang ada pada tautan [ini](https://github.com/rickyyuliawan-riyugan/Simple-Sundanese-Translator). Aplikasi penerjemah dapat melakukan penerjemahan dari Bahasa Indonesia ke Bahasa Sunda ataupun dari Bahasa Sunda ke Bahasa Indonesia. Aplikasi ini juga dapat menggunakan beberapa algoritma pencocokan *string* (tidak mempengaruhi hasil terjemahan).
 
-## Contoh Kasus Uji
-```
-Sunda - Indonesia
-Sunda : nami abdi Riyugan
-Indonesia : nama saya Riyugan
-```
+## Persiapan
+Program penerjemah ini memerlukan beberapa program di antara lain:
+1. [Python 3.8](https://www.python.org/downloads/) (Versi yang lebih rendah tidak dijamin bisa menjalankan walaupun mungkin bisa)
+2. Flask - bisa diperoleh dengan menjalankan ` pip install -r requirements.txt ` setelah memasang Python
 
-```
-Sunda - Indonesia
-Sunda : abdi teh sanes jalma Bandung
-Indonesia : saya bukan orang Bandung
-```
+## Cara Menjalankan
+Jalankan ` start_server.bat ` dan program akan otomatis jalan.
 
-```
-Sunda - Indonesia
-Sunda : anjeun sumping ti mana?
-Indonesia : kamu tiba dari mana?
-```
+## Cara Menggunakan
+Berikut adalah cara menggunakan aplikasi ini:
+1. Buka alamat aplikasi (standarnya di http://localhost:5000/) pada program penjelajah *web*.
+2. Ketik sebuah kalimat untuk diterjemahkan.
+3. Pilih bahasa hasil terjemahan
+4. Pilih algoritma pencocokan pola yang ingin digunakan (tidak berpengaruh pada hasil terjemahan)
+5. Tekan tombol "TERJEMAHKAN"
+6. Untuk menerjemahkan lagi, ulangi proses dari langkah 2
 
-```
-Indonesia - Sunda
-Indonesia : nama saya Riyugan
-Sunda : nami abdi Riyugan
-```
-
-```
-Indonesia - Sunda
-Indonesia : nama adik kamu siapa?
-Sunda : nami rai anjeun teh saha?
-```
-
-```
-Indonesia - Sunda
-Indonesia : saya tidak bisa bahasa Sunda
-Sunda : abdi henteu tiasa bahasa Sunda
-```
-
-## Pengumpulan
-1. Lakukan merge request dari hasil fork kalian ke repository ini
-2. Untuk demonya, silahkan membuat video demo penggunaan programnya, diupload ke YouTube dan sertakan linknya pada Readme.
-
-### **_(Ubah file README ini pada repository hasil fork kalian)_**
+## Demonstrasi Program
+Video demonstrasi program dapat dilihat di Youtube pada pranala [ini](https://youtu.be/MHPZgMK-8FY)
