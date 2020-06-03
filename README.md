@@ -1,5 +1,4 @@
 # 13518107 - Simple Sundanese Translator
-Simple Sundanese to Bahasa Indonesia translator using Pattern Matching
 Penerjemah Sederhana dari Bahasa Sunda ke Bahasa Indonesia dengan Pencocokan Pola
 
 ## Pembuat
